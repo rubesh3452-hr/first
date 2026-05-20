@@ -1,221 +1,134 @@
-# FILE 1: index.html
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LUXE Store</title>
+    <title>VELORA Luxury Fashion</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo">LUXE</div>
-
-        <nav>
-            <a href="#products">Products</a>
-            <a href="#wishlist">Wishlist</a>
+        <div class="logo">VELORA</div>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#products">Collections</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
-
-        <div class="nav-buttons">
-            <button class="secondary-btn">Login</button>
-            <button class="primary-btn">Cart (2)</button>
+        <div class="nav-actions">
+            <button id="themeToggle"> </button>
+            <button id="cartBtn">🛍 <span id="cartCount">0</span></button>
+            <button class="menu-btn" id="menuBtn">☰</button>
         </div>
     </header>
-
-    <section class="hero">
+    1
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p class="tag">NEXT GEN SHOPPING</p>
-            <h1>Premium Style.<br />Smooth Vibes.</h1>
-            <p class="hero-text">
-                Modern e-commerce experience with dark mode, responsive layouts,
-                animations, and aesthetic design.
-            </p>
-
-            <div class="hero-buttons">
-                <button class="primary-btn">Shop Now</button>
-                <button class="secondary-btn">Explore</button>
-            </div>
+            <p>LUXURY • MODERN • ELEGANT</p>
+            <h1>Luxury Fashion
+                <span>Reimagined</span>
+            </h1>
+            <button class="shop-btn">Explore Collection</button>
         </div>
-
-        <img class="hero-image"
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
-            alt="watch" />
     </section>
-
-    <section id="products" class="products-section">
-        <div class="section-title">
-            <h2>Trending Products</h2>
-            <p>Minimal layouts + smooth interactions.</p>
-        </div>
-
-        <div class="product-grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop"
-                    alt="headphones">
-                <div class="card-content">
-                    <h3>Nebula Headphones</h3>
-                    <span>$129</span>
-                    <p>Premium audio with futuristic aesthetics.</p>
-                    <div class="card-buttons">
-                        <button class="primary-btn add-cart">Add to Cart</button>
-                        <button class="secondary-btn">❤</button>
-                    </div>
+    <!-- FILTERS -->
+    <section class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="bags">Bags</button>
+        <button class="filter" data-filter="fashion">Fashion</button>
+        <button class="filter" data-filter="shoes">Shoes</button>
+    </section>
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+        <div class="product-card fashion">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1529139574466-
+a303027c1d8b?q=80&w=1200&auto=format&fit=crop" alt="fashion">
+                <div class="product-icons">
+                    <button class="wishlist">❤</button>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop"
-                    alt="watch">
-                <div class="card-content">
-                    <h3>Pixel Watch</h3>
-                    <span>$249</span>
-                    <p>Clean smart wearable with modern design.</p>
-                    <div class="card-buttons">
-                        <button class="primary-btn add-cart">Add to Cart</button>
-                        <button class="secondary-btn">❤</button>
-                    </div>
+            <div class="product-info">
+                <h3>Velora Noir Dress</h3>
+                <p>$249</p>
+                <button class="add-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="product-card bags">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1584917865442-
+de89df76afd3?q=80&w=1200&auto=format&fit=crop" alt="bag">
+                <div class="product-icons">
+                    <button class="wishlist">❤</button>
                 </div>
             </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
-                    alt="shoes">
-                <div class="card-content">
-                    <h3>Nova Sneakers</h3>
-                    <span>$89</span>
-                    <p>Streetwear style with all-day comfort.</p>
-                    <div class="card-buttons">
-                        <button class="primary-btn add-cart">Add to Cart</button>
-                        <button class="secondary-btn">❤</button>
-                    </div>
+            2
+            <div class="product-info">
+                <h3>Luxury Leather Bag</h3>
+                <p>$329</p>
+                <button class="add-cart">Add To Cart</button>
+            </div>
+        </div>
+        <div class="product-card shoes">
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?
+q=80&w=1200&auto=format&fit=crop" alt="shoe">
+                <div class="product-icons">
+                    <button class="wishlist">❤</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="detail-section">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop"
-            alt="detail">
-
-        <div class="detail-content">
-            <p class="tag">PRODUCT DETAIL</p>
-            <h2>Nebula Headphones</h2>
-            <p>
-                Designed with immersive sound and futuristic aesthetics.
-                Perfect for gaming, music, and productivity.
-            </p>
-
-            <div class="price-row">
-                <span class="price">$129</span>
-                <span class="old-price">$159</span>
-            </div>
-
-            <div class="hero-buttons">
-                <button class="primary-btn">Buy Now</button>
-                <button class="secondary-btn">Wishlist</button>
+            <div class="product-info">
+                <h3>Elite Fashion Sneakers</h3>
+                <p>$189</p>
+                <button class="add-cart">Add To Cart</button>
             </div>
         </div>
     </section>
-
-    <section class="cart-checkout">
-        <div class="cart-box">
-            <h2>Shopping Cart</h2>
-            <div class="cart-item">
-                <p>Nebula Headphones</p>
-                <span>$129</span>
-            </div>
-
-            <div class="cart-item">
-                <p>Pixel Watch</p>
-                <span>$249</span>
-            </div>
+    <!-- CART SIDEBAR -->
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button id="closeCart">✕</button>
         </div>
-
-        <div class="checkout-box">
-            <h2>Checkout</h2>
-
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
-            <input type="text" placeholder="Shipping Address">
-
-            <button class="primary-btn full-btn">Complete Purchase</button>
+        <div id="cartItems"></div>
+        <div class="cart-footer">
+            <h3>Total: $<span id="totalPrice">0</span></h3>
+            <button class="checkout-btn">Checkout</button>
         </div>
-    </section>
-
-    <section class="auth-section">
-        <div class="auth-box">
-            <h2>Login</h2>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button class="primary-btn full-btn">Sign In</button>
-        </div>
-
-        <div class="auth-box">
-            <h2>Register</h2>
-            <input type="text" placeholder="Username">
-            <input type="email" placeholder="Email">
-            <button class="primary-btn full-btn">Create Account</button>
-        </div>
-    </section>
-
-    <section id="wishlist" class="wishlist-section">
-        <div class="section-title">
-            <h2>Wishlist</h2>
-            <p>Save your favorite items.</p>
-        </div>
-
-        <div class="product-grid">
-            <div class="card small-card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1200&auto=format&fit=crop"
-                    alt="wishlist">
-                <div class="card-content">
-                    <h3>Nova Sneakers</h3>
-                    <button class="primary-btn full-btn">Move to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="confirmation-section">
-        <div class="confirm-box">
-            <h2>✅ Order Confirmed</h2>
-            <p>Your order has been placed successfully.</p>
-            <button class="primary-btn">Continue Shopping</button>
-        </div>
-    </section>
-
-    <section id="about" class="about-contact">
+    </aside>
+    <!-- ABOUT -->
+    <section class="about" id="about">
         <div>
-            <h2>About Us</h2>
+            <h2>About VELORA</h2>
             <p>
-                LUXE is a modern shopping UI focused on premium visuals,
-                responsive design, and smooth user experience.
+                VELORA blends luxury fashion with modern aesthetics.
+                Crafted for people who love premium style and elegant experiences.
             </p>
         </div>
-
-        <div id="contact" class="contact-box">
-            <h2>Contact</h2>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Message"></textarea>
-            <button class="primary-btn full-btn">Send Message</button>
-        </div>
+        3
     </section>
-
-    <footer>
-        © 2026 LUXE. Modern E-Commerce Experience.
-    </footer>
-
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <!-- TOAST -->
+    <div class="toast" id="toast">Added To Cart</div>
     <script src="script.js"></script>
 </body>
 
 </html>
-```
-
-# FILE 2: style.css
-```css
